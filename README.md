@@ -18,12 +18,15 @@ This should be obvious, but run the application you just built.
 
 This thing is distributed under Apache 2.0. See [LICENSE](LICENSE).
 
-Gitignore file from [github/gitignore][4].
+Gitignore file from [github/gitignore][3].
 
 ## Additional details
 
 ### Contact
 
-You can find us [here][https://github.com/Vasile2k] and [here][https://github.com/dannymanastireanu].
+You can find us [here][1] and [here][2].
 
 ### References
+[1]: https://github.com/Vasile2k
+[2]: https://github.com/StratulatStefan
+[3]: https://github.com/github/gitignore
