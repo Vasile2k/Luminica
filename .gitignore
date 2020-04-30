@@ -350,7 +350,11 @@ MigrationBackup/
 .ionide/
 
 # Ignore glew and glfw binaries
-lib/glew/include
-lib/glew/lib
-lib/glfw/include
-lib/glfw/lib
+lib/glew/include/*
+lib/glew/lib/*
+lib/glfw/include/*
+lib/glfw/lib/*
+!lib/glew/include/dummy.txt
+!lib/glew/lib/dummy.txt
+!lib/glfw/include/dummy.txt
+!lib/glfw/lib/dummy.txt
