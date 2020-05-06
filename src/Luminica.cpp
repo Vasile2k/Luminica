@@ -20,6 +20,14 @@
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
+float vertices[] = {
+	-0.5f, -0.5f, 0.0f,
+	 0.5f, -0.5f, 0.0f,
+	 0.0f,  0.5f, 0.0f
+};
+
+unsigned int VBO;
+
 void error_callback(int error, const char* description) {
 	fprintf(stderr, "Error %d: %s\n", error, description);
 }
@@ -39,7 +47,7 @@ entry_point {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
-    GLFWwindow* w = glfwCreateWindow(640, 480, "cacauo", NULL, NULL);
+    GLFWwindow* w = glfwCreateWindow(1280, 720, "Window", NULL, NULL);
 
     glfwMakeContextCurrent(w);
 
