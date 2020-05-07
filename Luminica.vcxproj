@@ -24,6 +24,10 @@
   <ItemGroup>
     <ClCompile Include="src\Luminica.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\fragment.glsl" />
+    <None Include="res\shaders\vertex.glsl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{5FD93A7F-7609-4FD9-BACB-F7E20509CFEA}</ProjectGuid>
@@ -123,7 +127,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)lib\glew\include;$(SolutionDir)lib\glfw\include;$(SolutionDir)lib\stb;$(SolutionDir)lib\imgui;$(SolutionDir)lib\imgui\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

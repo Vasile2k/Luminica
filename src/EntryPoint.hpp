@@ -1,5 +1,6 @@
 #pragma once
 
+
 #ifdef _DEBUG
 
 #define entry_point int main()

@@ -6,4 +6,8 @@
   <ItemGroup>
     <ClCompile Include="src\Luminica.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\fragment.glsl" />
+    <None Include="res\shaders\vertex.glsl" />
+  </ItemGroup>
 </Project>
