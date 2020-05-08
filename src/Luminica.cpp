@@ -1,26 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <windows.h>
+#include "Shader.h"
 #include "EntryPoint.hpp"
 
-#define STB_IMAGE_IMPLEMENTATION
-#pragma warning(push)
-#pragma warning(disable:6011)
-#pragma warning(disable:6262)
-#pragma warning(disable:6308)
-#pragma warning(disable:26451)
-#pragma warning(disable:28128)
-#pragma warning(disable:28182)
-//#include "stb_image.h"
-#pragma warning(pop)
-#undef STB_IMAGE_IMPLEMENTATION
-
-#define GLEW_STATIC
-#include <GL/glew.h>
-
-#define GLFW_INCLUDE_NONE
-#include <GLFW/glfw3.h>
 
 
 std::string readShader(const char *fn)
@@ -61,7 +41,6 @@ bool loadShader(GLuint &program) {
 		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
 		std::cout << "Could not compile vertex shader: " << std::endl;
 		std::cout << infoLog << std::endl;
-		return false;
 	}
 
 	std::string fragTempSrc = readShader("D:\\Downloads\\Github\\Luminica\\res\\shaders\\fragment.glsl");
@@ -131,10 +110,13 @@ entry_point{
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
+	Shader test("D:\\Downloads\\Github\\Luminica\\res\\shaders\\fragment.glsl", "D:\\Downloads\\Github\\Luminica\\res\\shaders\\fragment.glsl");
 	GLuint mainProgram;
 	if (!loadShader(mainProgram)) {
 		glfwTerminate();
 	}
+
+	glUseProgram(mainProgram);
 
 	while (!glfwWindowShouldClose(window)) {
 
@@ -146,6 +128,12 @@ entry_point{
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glfwSwapBuffers(window);
+		glFlush();
+
+		glBindVertexArray(0);
+		glUseProgram(0);
+		glActiveTexture(0);
+		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
 	glfwDestroyWindow(window);
