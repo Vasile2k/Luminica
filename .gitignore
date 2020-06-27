@@ -358,3 +358,4 @@ lib/glfw/lib/*
 !lib/glew/lib/dummy.txt
 !lib/glfw/include/dummy.txt
 !lib/glfw/lib/dummy.txt
+!res/model/*.obj
